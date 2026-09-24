@@ -31,6 +31,75 @@ else if (score <4){cout << "Tu ne islakai egza"<< endl;}
 */
 //3 uzd
 
+
+            int balance =100;
+            int choise;
+            do
+            {
+            cout<<"Saskaitos menu : "<< endl;
+            cout << "1.perziureti saskaitos likutis"<< endl;
+            cout << "2.papilditi saskaitos"<< endl;
+            cout << "3. atlikti  mokejimo" <<endl;
+            cout << "0. baigti program"<< endl;
+            cout  << "Pasirinkite funcijos " << endl;
+            cin >>  choise;
+            switch(choise) {
+            case 1:
+            cout<<"saskaitos likutis"<<endl;
+            break;
+            case 2: {
+            int amount;
+            cout << "Papildimo suma" << endl;
+            cin >>  amount;
+            if(amount > 0) {
+            balance += amount;
+            cout << "saskaita yra papildita" << endl;
+
+
+            }
+            else {
+            cout << "netinkama suma"<< endl;
+            }
+            break;
+            }
+            case 3: {
+
+            int amount;
+            cout << "mokejimo suma" << endl;
+            cin >>  amount;
+            if(amount <= 0) {
+            cout << "netinkama suma"<< endl;
+            }
+            else if (amount > balance) {
+            cout << "nepakankama likutis saskaitoja"<< endl;
+
+            }
+            else {
+            balance -= amount;
+            cout << "mokejomasa atlktas"<< endl;
+            }
+            break;
+            }
+            case 0:
+            cout << "program baigta" << endl;
+            break;
+
+            default:
+            cout << "tokios operacijos nera" << endl;
+
+
+
+
+
+
+
+
+            }
+
+
+            }
+
+            while (choise !=0);
     return 0;
     // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
