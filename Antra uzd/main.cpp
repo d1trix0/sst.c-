@@ -43,6 +43,7 @@ while (password.length() < 8);
     cout << "password is korect" <<1 endl;
 */
     // 4 uzd
+    /*
  int balance =100;
 int choise;
     do
@@ -111,5 +112,22 @@ break;
     }
 
     while (choise !=0);
+    */
+    // 5 uzd
+    const int  stgrades= 5;
+    int grades;
+    int sum=0;
+    int maxgredse=0;
+    for (int i=1;i<=stgrades;i++ ) {
+        cout<<"iveskite "<<i<< " stud pazims"<<endl;
+    cin >> grades;
+        sum+=grades;
+
+        maxgredse= (grades>maxgredse)?grades:maxgredse;
+
+    }
+    double average=static_cast<double>(sum)/stgrades;
+    cout<< fixed << setprecision(2)<< "Pazimis vid"<<average << endl;
+    cout << "Max  = " << maxgredse << endl;
     return 0;
 }
