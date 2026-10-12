@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 const double GBP_Bendras = 0.8729;
@@ -119,10 +120,24 @@ int main() {
                 result = eur * INR_Pirkti;
                 break;
         }
+        string fromCurrency, toCurrency;
 
-        cout << "\nExchanged amount: " << money << endl;
-        cout << "Result: " << result << endl;
-        cout << "your proces was finished." << endl;
+        switch (valuet) {
+            case 1: fromCurrency = "EUR"; break;
+            case 2: fromCurrency = "USD"; break;
+            case 3: fromCurrency = "GBP"; break;
+            case 4: fromCurrency = "INR"; break;
+        }
+
+        switch (getValuet) {
+            case 1: toCurrency = "EUR"; break;
+            case 2: toCurrency = "USD"; break;
+            case 3: toCurrency = "GBP"; break;
+            case 4: toCurrency = "INR"; break;
+        }
+        cout << "\nExchanged amount: " << money << " " << fromCurrency << endl;
+        cout << "Result: " << result << " " << toCurrency << endl;
+        cout << "Your process was finished." << endl;
     }
 
     return 0;
