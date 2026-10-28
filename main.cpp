@@ -241,6 +241,39 @@ int main()
         pasirinkimas = nuskaitytiSkaiciu(
             "Pasirinkite veiksma (1-7): ", 1, 7);
 
+        switch (pasirinkimas)
+        {
+            case 1:
+                ivestiMokini(
+                    vardai, pazymiai, pazymiuKiekiai, mokiniuKiekis);
+                break;
+            case 2:
+                perziuretiVisusMokinius(
+                    vardai, pazymiai, pazymiuKiekiai, mokiniuKiekis);
+                break;
+            case 3:
+                perziuretiMokini(
+                    vardai, pazymiai, pazymiuKiekiai, mokiniuKiekis);
+                break;
+            case 4:
+                atnaujintiPazymi(
+                    vardai, pazymiai, pazymiuKiekiai, mokiniuKiekis);
+                break;
+            case 5:
+                apskaiciuotiVidurki(
+                    vardai, pazymiai, pazymiuKiekiai, mokiniuKiekis);
+                break;
+            case 6:
+                pasalintiMokini(
+                    vardai, pazymiai, pazymiuKiekiai, mokiniuKiekis);
+                break;
+            case 7:
+                cout << "Programa baigta.\n";
+                break;
+        }
+
+    } while (pasirinkimas != 7);
+
 
 
     return 0;
