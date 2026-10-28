@@ -219,6 +219,27 @@ void pasalintiMokini(
     mokiniuKiekis--;
     cout << "Mokinys pasalintas.\n";
 }
+int main()
+{
+    string vardai[MAX_MOKINIU];
+    int pazymiai[MAX_MOKINIU][MAX_PAZYMIU] = {};
+    int pazymiuKiekiai[MAX_MOKINIU] = {};
+    int mokiniuKiekis = 0;
+    int pasirinkimas;
+
+    do
+    {
+        cout << "\n--- Mokiniu pazymiu sistema ---\n";
+        cout << "1. Ivesti mokini ir jo pazymius\n";
+        cout << "2. Perziureti visu mokiniu pazymius\n";
+        cout << "3. Perziureti konkretaus mokinio pazymius\n";
+        cout << "4. Atnaujinti pazymi\n";
+        cout << "5. Apskaiciuoti mokinio vidurki\n";
+        cout << "6. Pasalinti mokini\n";
+        cout << "7. Iseiti\n";
+
+        pasirinkimas = nuskaitytiSkaiciu(
+            "Pasirinkite veiksma (1-7): ", 1, 7);
 
 
 
